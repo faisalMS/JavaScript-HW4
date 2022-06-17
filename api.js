@@ -1,9 +1,12 @@
-    const onclick = document.getElementById("getImg"),
+    const inpsearch = document.getElementById("getImg"),
       output    = document.getElementById("output")
+      audio = new Audio("theme.m4a")
+
 
 
 
 window.addEventListener("load" , ()=>{
+    audio.play();
     loader();
     fetchcharcters();
 } )
@@ -18,8 +21,8 @@ function loader (){
     `
 }
 
-onclick.addEventListener("click",()=>{
-    let btn = onclick.value;
+inpsearch.addEventListener("click",()=>{
+    let btn = inpsearch.value;
     loader();
     fetchcharcters(btn)
 })
